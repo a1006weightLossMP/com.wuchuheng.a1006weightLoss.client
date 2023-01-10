@@ -1,0 +1,15 @@
+git_url("https://github.com/wuchuheng/certificates")
+git_basic_authorization(Base64.strict_encode64(ENV["GIT_AUTHORIZATION"]))
+keychain_password(ENV["MATCH_PASSWORD"])
+
+storage_mode("git")
+
+type("development") # The default type, can be: appstore, adhoc, enterprise or development
+
+app_identifier(["com.wuchuheng.a1006weightLoss.client"])
+# username("root@wuchuheng.com") # Your Apple Developer Portal username
+
+# For all available options run `fastlane match --help`
+# Remove the # in the beginning of the line to enable the other options
+
+# The docs are available on https://docs.fastlane.tools/actions/match
