@@ -51,10 +51,9 @@ jobs:
           lane: beta
           subdirectory: ios
         env:
-          GIT_AUTHORIZATION="${{ secrets.ITC_TEAM_ID }}"
-          APP_STORE_CONNECT_API_KEY_CONTENT="${{ secrets.APP_STORE_CONNECT_API_KEY_CONTENT}}"
-          APP_STORE_CONNECT_API_ISSUER_ID="${{ secrets.APP_STORE_CONNECT_API_ISSUER_ID}}"
-          APP_STORE_CONNECT_API_KEY_ID="${{ secrets.APP_STORE_CONNECT_API_KEY_ID}}"
-          MATCH_PASSWORD="${{ secrets.MATCH_PASSWORD}}"
-          TEMP_KEYCHAIN_USER="${{ secrets.TEMP_KEYCHAIN_USER}}"
-          GIT_AUTHORIZATION="${{ secrets.GIT_AUTHORIZATION}}"
+          GIT_AUTHORIZATION: "${{ secrets.ITC_TEAM_ID }}"
+          APP_STORE_CONNECT_API_KEY_CONTENT: "${{ secrets.APP_STORE_CONNECT_API_KEY_CONTENT}}"
+          APP_STORE_CONNECT_API_ISSUER_ID: "${{ secrets.APP_STORE_CONNECT_API_ISSUER_ID}}"
+          APP_STORE_CONNECT_API_KEY_ID: "${{ secrets.APP_STORE_CONNECT_API_KEY_ID}}"
+          MATCH_PASSWORD: "${{ secrets.MATCH_PASSWORD}}"
+          TEMP_KEYCHAIN_USER: "${{ secrets.TEMP_KEYCHAIN_USER}}"
