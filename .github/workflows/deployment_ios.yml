@@ -1,13 +1,12 @@
-name: Build IOS
+name: Deployment IOS
 
 on:
   push:
-    branches:
-      - dev
-      - master
+    tags:
+      - v*
 jobs:
   build_ios:
-    name: Build IOS
+    name: Deployment IOS
     runs-on: macos-latest
     steps:
       - name: Checkout code from ref
@@ -48,7 +47,7 @@ jobs:
       - name: Deploy iOS Beta to TestFlight via Fastlane
         uses: maierj/fastlane-action@v1.4.0
         with:
-          lane: build
+          lane: beta
           subdirectory: ios
         env:
           GIT_AUTHORIZATION: "${{ secrets.GIT_AUTHORIZATION }}"
