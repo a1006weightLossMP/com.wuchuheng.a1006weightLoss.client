@@ -1,4 +1,4 @@
-git_url("git@github.com:wuchuheng/certificates")
+git_url("https://github.com/wuchuheng/certificates")
 git_basic_authorization(Base64.strict_encode64(ENV["GIT_AUTHORIZATION"]))
 keychain_password(ENV["MATCH_PASSWORD"])
 
