@@ -12,4 +12,41 @@ jobs:
     steps:
       - name: Checkout code from ref
         uses: actions/checkout@v2
-      - run: echo "hello world"
+      - name: Configure env
+        run: |
+          envFile="ios/fastlane/.env";
+          touch $envFile;
+          cat >> $envFile  <<EOL
+          GIT_AUTHORIZATION="${{ secrets.GIT_AUTHORIZATION }}"
+          EOL
+          cat >> $envFile  <<EOL
+          APP_STORE_CONNECT_API_KEY_CONTENT="${{ secrets.APP_STORE_CONNECT_API_KEY_CONTENT }}"
+          EOL
+          cat >> $envFile  <<EOL
+          APP_STORE_CONNECT_API_ISSUER_ID="${{ secrets.APP_STORE_CONNECT_API_ISSUER_ID }}"
+          EOL
+          cat >> $envFile  <<EOL
+          APP_STORE_CONNECT_API_KEY_ID="${{ secrets.APP_STORE_CONNECT_API_KEY_ID }}"
+          EOL
+          cat >> $envFile  <<EOL
+          MATCH_PASSWORD="${{ secrets.MATCH_PASSWORD }}"
+          EOL
+          cat >> $envFile  <<EOL
+          TEMP_KEYCHAIN_USER="${{ secrets.TEMP_KEYCHAIN_USER }}"
+          EOL
+          cat >> $envFile  <<EOL
+          GIT_AUTHORIZATION="${{ secrets.GIT_AUTHORIZATION }}"
+          EOL
+          cat $envFile
+        - name: Run Flutter tasks
+          uses: subosito/flutter-action@v1
+          with:
+            flutter-version: '3.3.4'
+        - run: flutter clean
+        - run: flutter pub get
+        - run: flutter build ios --release --no-codesign
+        - name: Deploy iOS Beta to TestFlight via Fastlane
+          uses: maierj/fastlane-action@v1.4.0
+          with:
+            lane: beta
+            subdirectory: ios
