@@ -51,7 +51,7 @@ jobs:
           lane: beta
           subdirectory: ios
         env:
-          GIT_AUTHORIZATION: "${{ secrets.ITC_TEAM_ID }}"
+          GIT_AUTHORIZATION: "${{ secrets.GIT_AUTHORIZATION }}"
           APP_STORE_CONNECT_API_KEY_CONTENT: "${{ secrets.APP_STORE_CONNECT_API_KEY_CONTENT}}"
           APP_STORE_CONNECT_API_ISSUER_ID: "${{ secrets.APP_STORE_CONNECT_API_ISSUER_ID}}"
           APP_STORE_CONNECT_API_KEY_ID: "${{ secrets.APP_STORE_CONNECT_API_KEY_ID}}"
