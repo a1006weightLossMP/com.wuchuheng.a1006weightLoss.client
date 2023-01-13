@@ -1,8 +1,9 @@
 import 'package:client/components/layout/main_layout/main_layout.dart';
+import 'package:client/pages/home_page/diary_view/diary_view.dart';
 import 'package:flutter/material.dart';
 
 import '../../common/iconfont.dart';
-import '../../dto/data/navigation_item_data.dart';
+import '../../dto/data_obj/navigation_item_data_obj.dart';
 
 class HomePage extends StatefulWidget {
   const HomePage({Key? key}) : super(key: key);
@@ -14,18 +15,18 @@ class HomePage extends StatefulWidget {
 class _HomePageState extends State<HomePage> {
   int activeIndex = 0;
 
-  List<NavigationItemData> navigationItems = [
-    NavigationItemData(
+  List<NavigationItemDataObj> navigationItems = [
+    NavigationItemDataObj(
       iconData: IconFont.icon_diary,
       name: '日记',
-      content: Text('日记'),
+      content: DiaryView(),
     ),
-    NavigationItemData(
+    NavigationItemDataObj(
       iconData: IconFont.icon_report,
       name: '热量',
       content: Text('热量'),
     ),
-    NavigationItemData(
+    NavigationItemDataObj(
       iconData: IconFont.icon_me,
       name: '我的',
       content: const Text('我的'),

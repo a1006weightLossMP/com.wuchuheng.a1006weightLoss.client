@@ -1,11 +1,11 @@
 import 'package:flutter/material.dart';
 
-class NavigationItemData {
+class NavigationItemDataObj {
   final IconData iconData;
   final String name;
   final Widget content;
 
-  NavigationItemData({
+  NavigationItemDataObj({
     required this.iconData,
     required this.name,
     required this.content,

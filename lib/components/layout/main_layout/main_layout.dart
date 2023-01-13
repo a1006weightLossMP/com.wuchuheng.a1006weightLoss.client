@@ -1,9 +1,10 @@
-import 'package:client/dto/data/navigation_item_data.dart';
 import 'package:flutter/material.dart';
+
+import '../../../dto/data_obj/navigation_item_data_obj.dart';
 
 class MainLayout extends StatelessWidget {
   final int activeIndex;
-  final List<NavigationItemData> navigationItems;
+  final List<NavigationItemDataObj> navigationItems;
   final void Function(int newActiveIndex) onChange;
 
   const MainLayout({
@@ -24,11 +25,16 @@ class MainLayout extends StatelessWidget {
           direction: Axis.vertical,
           children: [
             Expanded(
-              child: Container(
-                color: backgroundColor,
-                width: double.infinity,
-                child: SingleChildScrollView(
-                  child: navigationItems[activeIndex].content,
+              child: ConstrainedBox(
+                constraints: BoxConstraints(
+                  maxWidth: MediaQuery.of(context).size.width,
+                ),
+                child: Container(
+                  color: backgroundColor,
+                  width: double.infinity,
+                  child: SingleChildScrollView(
+                    child: navigationItems[activeIndex].content,
+                  ),
                 ),
               ),
             ),
