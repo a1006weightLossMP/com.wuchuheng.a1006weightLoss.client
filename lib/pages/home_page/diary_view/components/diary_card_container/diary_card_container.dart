@@ -8,6 +8,7 @@ class DiaryCardContainer extends StatelessWidget {
   final String title;
   final String? subtitle;
   final IconData? subtitleIconData;
+  final Color? subtitleIconColor;
   double subtitleSize;
   DiaryCardContainer({
     Key? key,
@@ -15,6 +16,7 @@ class DiaryCardContainer extends StatelessWidget {
     required this.title,
     this.subtitle,
     this.subtitleIconData,
+    this.subtitleIconColor,
     this.subtitleSize = 13,
   }) : super(key: key);
 
@@ -56,6 +58,7 @@ class DiaryCardContainer extends StatelessWidget {
                           margin: const EdgeInsets.only(left: 3),
                           child: Icon(
                             subtitleIconData ?? IconFont.icon_right,
+                            color: subtitleIconColor,
                             size: subtitleSize,
                           ),
                         ),

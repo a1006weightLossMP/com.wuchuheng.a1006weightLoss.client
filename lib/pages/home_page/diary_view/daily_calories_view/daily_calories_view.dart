@@ -38,10 +38,12 @@ class DailyCaloriesView extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     const double sidePadding = 20;
+    Color? subtitleColor = Theme.of(context).textTheme.subtitle1?.color;
     return DiaryCardContainer(
       title: '每日热量',
       subtitleIconData: IconFont.icon_help,
       subtitleSize: 19,
+      subtitleIconColor: subtitleColor,
       child: LayoutBuilder(
         builder: (BuildContext context, BoxConstraints size) {
           return Container(
