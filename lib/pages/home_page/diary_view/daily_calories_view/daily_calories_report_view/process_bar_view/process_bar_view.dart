@@ -59,7 +59,7 @@ class _ProcessBarViewState extends State<ProcessBarView> {
                         const Padding(padding: EdgeInsets.only(top: 5)),
                         Text(
                           '还可摄入热量',
-                          style: TextStyle(color: subTitleColor),
+                          style: TextStyle(color: subTitleColor, fontSize: 11),
                         )
                       ],
                     ),
