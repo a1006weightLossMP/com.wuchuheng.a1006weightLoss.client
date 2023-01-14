@@ -19,12 +19,12 @@ class _HomePageState extends State<HomePage> {
     NavigationItemDataObj(
       iconData: IconFont.icon_diary,
       name: '日记',
-      content: DiaryView(),
+      content: const DiaryView(),
     ),
     NavigationItemDataObj(
       iconData: IconFont.icon_report,
       name: '热量',
-      content: Text('热量'),
+      content: const Text('热量'),
     ),
     NavigationItemDataObj(
       iconData: IconFont.icon_me,
