@@ -1,7 +1,6 @@
-import 'package:client/pages/home_page/diary_view/weight_manager_view/weight_manager_view.dart';
 import 'package:flutter/material.dart';
 
-import 'search_bar_view/search_bar_view.dart';
+import 'daily_calories_view/daily_calories_view.dart';
 
 class DiaryView extends StatefulWidget {
   const DiaryView({Key? key}) : super(key: key);
@@ -15,8 +14,9 @@ class _DiaryViewState extends State<DiaryView> {
   Widget build(BuildContext context) {
     return Column(
       children: [
-        SearchBarView(),
-        WeightManagerView(),
+        // const SearchBarView(),
+        // WeightManagerView(),
+        const DailyCaloriesView(),
       ],
     );
   }

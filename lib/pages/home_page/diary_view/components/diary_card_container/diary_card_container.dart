@@ -3,22 +3,25 @@ import 'package:flutter/material.dart';
 import '../../../../../common/iconfont.dart';
 import '../../diary_view_common.dart';
 
-class DiaryViewCardContainer extends StatelessWidget {
+class DiaryCardContainer extends StatelessWidget {
   final Widget child;
   final String title;
   final String? subtitle;
   final IconData? subtitleIconData;
-  const DiaryViewCardContainer({
+  double subtitleSize;
+  DiaryCardContainer({
     Key? key,
     required this.child,
     required this.title,
     this.subtitle,
     this.subtitleIconData,
+    this.subtitleSize = 13,
   }) : super(key: key);
 
   @override
   Widget build(BuildContext context) {
-    const double subtitleSize = 13;
+    subtitleSize = subtitleSize ?? 13;
+
     return Container(
       margin: const EdgeInsets.only(
         top: 20,
@@ -46,7 +49,7 @@ class DiaryViewCardContainer extends StatelessWidget {
                       if (subtitle != null)
                         Text(
                           subtitle!,
-                          style: const TextStyle(fontSize: subtitleSize),
+                          style: TextStyle(fontSize: subtitleSize),
                         ),
                       if (subtitleIconData != null || subtitle != null)
                         Container(
