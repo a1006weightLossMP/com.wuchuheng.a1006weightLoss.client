@@ -3,6 +3,7 @@ import 'package:flutter/material.dart';
 import 'daily_calories_view/daily_calories_view.dart';
 import 'daily_meal_view/daily_meal_view.dart';
 import 'search_bar_view/search_bar_view.dart';
+import 'weight_loss_goods/weight_loss_goods.dart';
 import 'weight_manager_view/weight_manager_view.dart';
 
 class DiaryView extends StatefulWidget {
@@ -21,6 +22,7 @@ class _DiaryViewState extends State<DiaryView> {
         WeightManagerView(),
         const DailyCaloriesView(),
         const DailyMealView(),
+        WeightLossGoods(),
       ],
     );
   }
