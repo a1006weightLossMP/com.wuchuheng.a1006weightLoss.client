@@ -5,6 +5,7 @@ import 'package:flutter/material.dart';
 
 import '../../common/iconfont.dart';
 import '../../dto/data_obj/navigation_item_data_obj.dart';
+import 'me_view/me_view.dart';
 
 class HomePage extends StatefulWidget {
   const HomePage({Key? key}) : super(key: key);
@@ -14,7 +15,7 @@ class HomePage extends StatefulWidget {
 }
 
 class _HomePageState extends State<HomePage> {
-  int activeIndex = 1;
+  int activeIndex = 2;
 
   List<NavigationItemDataObj> navigationItems = [
     NavigationItemDataObj(
@@ -31,7 +32,7 @@ class _HomePageState extends State<HomePage> {
     NavigationItemDataObj(
       iconData: IconFont.icon_me,
       name: '我的',
-      content: const Text('我的'),
+      content: const MeView(),
     ),
   ];
 
