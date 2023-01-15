@@ -126,7 +126,7 @@ class CaloriesPlayingView extends StatelessWidget {
       title: "视频教程",
       child: Container(
         padding: EdgeInsets.only(left: sideMargin, right: sideMargin),
-        height: 400 + axisSpacing,
+        height: 400 + axisSpacing + 30,
         width: double.infinity,
         child: GridView.count(
           physics: const NeverScrollableScrollPhysics(),
