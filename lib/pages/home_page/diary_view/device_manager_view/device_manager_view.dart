@@ -1,7 +1,7 @@
-import 'package:client/pages/home_page/diary_view/device_manager_view/device_manager_content_Item_view/device_manager_content_item_view.dart';
 import 'package:flutter/material.dart';
 
 import '../../components/home_page_card_container/home_page_card_container.dart';
+import 'device_manager_content_Item_view/device_manager_content_item_view.dart';
 import 'device_manager_top_view/device_manager_top_view.dart';
 
 class DeviceManagerView extends StatelessWidget {
