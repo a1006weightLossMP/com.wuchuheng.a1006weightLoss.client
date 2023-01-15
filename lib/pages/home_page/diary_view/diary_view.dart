@@ -1,3 +1,4 @@
+import 'package:client/pages/home_page/diary_view/device_manager_view/device_manager_view.dart';
 import 'package:flutter/material.dart';
 
 import 'daily_calories_view/daily_calories_view.dart';
@@ -23,6 +24,7 @@ class _DiaryViewState extends State<DiaryView> {
         const DailyCaloriesView(),
         const DailyMealView(),
         WeightLossGoods(),
+        const DeviceManagerView(),
       ],
     );
   }
