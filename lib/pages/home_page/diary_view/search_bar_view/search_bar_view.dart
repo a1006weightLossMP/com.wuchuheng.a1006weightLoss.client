@@ -1,8 +1,8 @@
-import 'package:client/pages/home_page/diary_view/diary_view_common.dart';
 import 'package:client/pages/home_page/diary_view/search_bar_view/avatar_bar_view/avatar_bar_view.dart';
 import 'package:flutter/material.dart';
 import 'package:hexcolor/hexcolor.dart';
 
+import '../../home_page_common.dart';
 import 'search_view/search_view.dart';
 
 class SearchBarView extends StatelessWidget {
@@ -34,8 +34,8 @@ class SearchBarView extends StatelessWidget {
             SearchView(),
             AvatarBarView(
               avatarList: [
-                "assets/images/avatars/avatar1.png",
-                "assets/images/avatars/avatar2.png",
+                "assets/images/home_page/diary_view/avatars/avatar1.png",
+                "assets/images/home_page/diary_view/avatars/avatar2.png",
               ],
             ),
           ],

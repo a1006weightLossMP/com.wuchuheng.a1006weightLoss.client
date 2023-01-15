@@ -116,7 +116,7 @@ class _DailyMealItemViewState extends State<DailyMealItemView> {
           border: Border(
             bottom: BorderSide(
               width: 1,
-              color: backgroundColor ?? Colors.black,
+              color: backgroundColor,
             ),
           ),
         ),

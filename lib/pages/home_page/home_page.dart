@@ -1,4 +1,5 @@
 import 'package:client/components/layout/main_layout/main_layout.dart';
+import 'package:client/pages/home_page/calories_view/calories_view.dart';
 import 'package:client/pages/home_page/diary_view/diary_view.dart';
 import 'package:flutter/material.dart';
 
@@ -13,7 +14,7 @@ class HomePage extends StatefulWidget {
 }
 
 class _HomePageState extends State<HomePage> {
-  int activeIndex = 0;
+  int activeIndex = 1;
 
   List<NavigationItemDataObj> navigationItems = [
     NavigationItemDataObj(
@@ -24,7 +25,8 @@ class _HomePageState extends State<HomePage> {
     NavigationItemDataObj(
       iconData: IconFont.icon_report,
       name: '热量',
-      content: const Text('热量'),
+      appBar: caloriesAppbar,
+      content: const CaloriesView(),
     ),
     NavigationItemDataObj(
       iconData: IconFont.icon_me,

@@ -2,7 +2,7 @@ import 'package:flutter/material.dart';
 import 'package:hexcolor/hexcolor.dart';
 
 import '../../../../common/iconfont.dart';
-import '../components/diary_card_container/diary_card_container.dart';
+import '../../components/home_page_card_container/home_page_card_container.dart';
 import 'daily_meal_item_view/daily_meal_item_view.dart';
 
 class DailyMealView extends StatelessWidget {
@@ -10,7 +10,7 @@ class DailyMealView extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return DiaryCardContainer(
+    return HomePageCardContainer(
       title: '每日配餐',
       child: LayoutBuilder(
         builder: (BuildContext, BoxConstraints) {

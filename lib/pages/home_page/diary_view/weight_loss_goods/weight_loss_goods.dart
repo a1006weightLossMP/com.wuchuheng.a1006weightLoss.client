@@ -1,6 +1,7 @@
-import 'package:client/pages/home_page/diary_view/components/diary_card_container/diary_card_container.dart';
 import 'package:flutter/material.dart';
 import 'package:hexcolor/hexcolor.dart';
+
+import '../../components/home_page_card_container/home_page_card_container.dart';
 
 class GoodsItemObj {
   final String image;
@@ -45,7 +46,7 @@ class GoodsItemView extends StatelessWidget {
                   ],
                 ),
                 Container(
-                  padding: EdgeInsets.all(3),
+                  padding: const EdgeInsets.all(3),
                   decoration: BoxDecoration(
                     color: Colors.black.withOpacity(0.5),
                     borderRadius: BorderRadius.all(Radius.circular(4)),
@@ -66,18 +67,18 @@ class GoodsItemView extends StatelessWidget {
 
 class WeightLossGoods extends StatelessWidget {
   List<GoodsItemObj> goodsList = [
-    GoodsItemObj(image: "assets/images/goods/goods1.jpeg"),
-    GoodsItemObj(image: "assets/images/goods/goods2.jpeg"),
-    GoodsItemObj(image: "assets/images/goods/goods3.jpeg"),
-    GoodsItemObj(image: "assets/images/goods/goods4.jpeg"),
-    GoodsItemObj(image: "assets/images/goods/goods5.jpeg"),
+    GoodsItemObj(image: "assets/images/home_page/diary_view/goods/goods1.jpeg"),
+    GoodsItemObj(image: "assets/images/home_page/diary_view/goods/goods2.jpeg"),
+    GoodsItemObj(image: "assets/images/home_page/diary_view/goods/goods3.jpeg"),
+    GoodsItemObj(image: "assets/images/home_page/diary_view/goods/goods4.jpeg"),
+    GoodsItemObj(image: "assets/images/home_page/diary_view/goods/goods5.jpeg"),
   ];
   WeightLossGoods({Key? key}) : super(key: key);
 
   @override
   Widget build(BuildContext context) {
     const double height = 160;
-    return DiaryCardContainer(
+    return HomePageCardContainer(
       title: '减重方案产品',
       child: Container(
         color: Colors.white,

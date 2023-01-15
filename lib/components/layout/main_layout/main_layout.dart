@@ -20,6 +20,9 @@ class MainLayout extends StatelessWidget {
     final Color backgroundColor = Theme.of(context).backgroundColor;
 
     return Scaffold(
+      appBar: navigationItems[activeIndex].appBar != null
+          ? navigationItems[activeIndex].appBar!()
+          : null,
       body: SafeArea(
         child: Flex(
           direction: Axis.vertical,
@@ -46,7 +49,11 @@ class MainLayout extends StatelessWidget {
                 mainAxisAlignment: MainAxisAlignment.spaceAround,
                 children: [
                   for (var i = 0; i < navigationItems.length; i++)
-                    Expanded(
+                    SizedBox(
+                      key: Key(i.toString()),
+                      width: MediaQuery.of(context).size.width /
+                              navigationItems.length -
+                          0.0000001,
                       child: GestureDetector(
                         onTap: () {
                           onChange(i);

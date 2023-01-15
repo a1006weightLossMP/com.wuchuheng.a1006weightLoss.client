@@ -4,7 +4,7 @@ import 'package:client/pages/home_page/diary_view/daily_calories_view/daily_calo
 import 'package:client/pages/home_page/diary_view/daily_calories_view/daily_calories_summary/daily_calories_summary.dart';
 import 'package:flutter/material.dart';
 
-import '../components/diary_card_container/diary_card_container.dart';
+import '../../components/home_page_card_container/home_page_card_container.dart';
 import 'daily_calories_button_view/daily_calories_button_view.dart';
 import 'daily_calories_title_view/daily_calories_title_view.dart';
 
@@ -39,7 +39,7 @@ class DailyCaloriesView extends StatelessWidget {
   Widget build(BuildContext context) {
     const double sidePadding = 20;
     Color? subtitleColor = Theme.of(context).textTheme.subtitle1?.color;
-    return DiaryCardContainer(
+    return HomePageCardContainer(
       title: '每日热量',
       subtitleIconData: IconFont.icon_help,
       subtitleSize: 19,

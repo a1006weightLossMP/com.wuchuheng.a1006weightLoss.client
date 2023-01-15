@@ -1,16 +1,20 @@
+import 'package:client/pages/home_page/diary_view/daily_calories_view/daily_calories_common.dart';
 import 'package:flutter/material.dart';
 
-import '../../../../../common/iconfont.dart';
-import '../../diary_view_common.dart';
+import '../../../../common/iconfont.dart';
+import '../../home_page_common.dart';
 
-class DiaryCardContainer extends StatelessWidget {
+class HomePageCardContainer extends StatelessWidget {
   final Widget child;
   final String title;
   final String? subtitle;
   final IconData? subtitleIconData;
   final Color? subtitleIconColor;
+  final bool isShowSubtitleIcon;
+  final IconData? leftIconData;
+  Color? subtitleColor;
   double subtitleSize;
-  DiaryCardContainer({
+  HomePageCardContainer({
     Key? key,
     required this.child,
     required this.title,
@@ -18,12 +22,13 @@ class DiaryCardContainer extends StatelessWidget {
     this.subtitleIconData,
     this.subtitleIconColor,
     this.subtitleSize = 13,
+    this.isShowSubtitleIcon = true,
+    this.subtitleColor,
+    this.leftIconData,
   }) : super(key: key);
 
   @override
   Widget build(BuildContext context) {
-    subtitleSize = subtitleSize ?? 13;
-
     return Container(
       margin: const EdgeInsets.only(
         top: 20,
@@ -48,12 +53,25 @@ class DiaryCardContainer extends StatelessWidget {
                   ),
                   Row(
                     children: [
+                      if (leftIconData != null)
+                        Container(
+                          padding: const EdgeInsets.only(right: 2),
+                          child: Icon(
+                            leftIconData,
+                            size: subtitleSize,
+                            color: subtitleColor,
+                          ),
+                        ),
                       if (subtitle != null)
                         Text(
                           subtitle!,
-                          style: TextStyle(fontSize: subtitleSize),
+                          style: TextStyle(
+                            fontSize: subtitleSize,
+                            color: subtitleColor,
+                          ),
                         ),
-                      if (subtitleIconData != null || subtitle != null)
+                      if (isShowSubtitleIcon &&
+                          (subtitleIconData != null || subtitle != null))
                         Container(
                           margin: const EdgeInsets.only(left: 3),
                           child: Icon(

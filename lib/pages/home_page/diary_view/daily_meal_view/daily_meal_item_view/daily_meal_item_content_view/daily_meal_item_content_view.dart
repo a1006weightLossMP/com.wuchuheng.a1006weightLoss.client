@@ -31,34 +31,118 @@ class _DailyMealItemContentViewState extends State<DailyMealItemContentView>
   late Animation animation;
   final double animateEnd = 1;
   final List<FoodDataObj> foodList = [
-    FoodDataObj(name: '牛肉', weight: 10, image: "assets/images/food/beef.png"),
-    FoodDataObj(name: '玉米', weight: 1, image: "assets/images/food/corn.png"),
-    FoodDataObj(name: '生菜', weight: 1, image: "assets/images/food/lettuce.png"),
-    FoodDataObj(name: '牛奶', weight: 1, image: "assets/images/food/milk.png"),
-    FoodDataObj(name: '橘子', weight: 1, image: "assets/images/food/oringe.png"),
-    FoodDataObj(name: '桃子', weight: 1, image: "assets/images/food/peach.png"),
-    FoodDataObj(name: '木瓜', weight: 1, image: "assets/images/food/pumpkin.png"),
-    FoodDataObj(name: '牛肉', weight: 10, image: "assets/images/food/beef.png"),
-    FoodDataObj(name: '玉米', weight: 1, image: "assets/images/food/corn.png"),
-    FoodDataObj(name: '生菜', weight: 1, image: "assets/images/food/lettuce.png"),
-    FoodDataObj(name: '牛奶', weight: 1, image: "assets/images/food/milk.png"),
-    FoodDataObj(name: '橘子', weight: 1, image: "assets/images/food/oringe.png"),
-    FoodDataObj(name: '桃子', weight: 1, image: "assets/images/food/peach.png"),
-    FoodDataObj(name: '木瓜', weight: 1, image: "assets/images/food/pumpkin.png"),
-    FoodDataObj(name: '牛肉', weight: 10, image: "assets/images/food/beef.png"),
-    FoodDataObj(name: '玉米', weight: 1, image: "assets/images/food/corn.png"),
-    FoodDataObj(name: '生菜', weight: 1, image: "assets/images/food/lettuce.png"),
-    FoodDataObj(name: '牛奶', weight: 1, image: "assets/images/food/milk.png"),
-    FoodDataObj(name: '橘子', weight: 1, image: "assets/images/food/oringe.png"),
-    FoodDataObj(name: '桃子', weight: 1, image: "assets/images/food/peach.png"),
-    FoodDataObj(name: '木瓜', weight: 1, image: "assets/images/food/pumpkin.png"),
-    FoodDataObj(name: '牛肉', weight: 10, image: "assets/images/food/beef.png"),
-    FoodDataObj(name: '玉米', weight: 1, image: "assets/images/food/corn.png"),
-    FoodDataObj(name: '生菜', weight: 1, image: "assets/images/food/lettuce.png"),
-    FoodDataObj(name: '牛奶', weight: 1, image: "assets/images/food/milk.png"),
-    FoodDataObj(name: '橘子', weight: 1, image: "assets/images/food/oringe.png"),
-    FoodDataObj(name: '桃子', weight: 1, image: "assets/images/food/peach.png"),
-    FoodDataObj(name: '木瓜', weight: 1, image: "assets/images/food/pumpkin.png"),
+    FoodDataObj(
+        name: '牛肉',
+        weight: 10,
+        image: "assets/images/home_page/diary_view/food/beef.png"),
+    FoodDataObj(
+        name: '玉米',
+        weight: 1,
+        image: "assets/images/home_page/diary_view/food/corn.png"),
+    FoodDataObj(
+        name: '生菜',
+        weight: 1,
+        image: "assets/images/home_page/diary_view/food/lettuce.png"),
+    FoodDataObj(
+        name: '牛奶',
+        weight: 1,
+        image: "assets/images/home_page/diary_view/food/milk.png"),
+    FoodDataObj(
+        name: '橘子',
+        weight: 1,
+        image: "assets/images/home_page/diary_view/food/oringe.png"),
+    FoodDataObj(
+        name: '桃子',
+        weight: 1,
+        image: "assets/images/home_page/diary_view/food/peach.png"),
+    FoodDataObj(
+        name: '木瓜',
+        weight: 1,
+        image: "assets/images/home_page/diary_view/food/pumpkin.png"),
+    FoodDataObj(
+        name: '牛肉',
+        weight: 10,
+        image: "assets/images/home_page/diary_view/food/beef.png"),
+    FoodDataObj(
+        name: '玉米',
+        weight: 1,
+        image: "assets/images/home_page/diary_view/food/corn.png"),
+    FoodDataObj(
+        name: '生菜',
+        weight: 1,
+        image: "assets/images/home_page/diary_view/food/lettuce.png"),
+    FoodDataObj(
+        name: '牛奶',
+        weight: 1,
+        image: "assets/images/home_page/diary_view/food/milk.png"),
+    FoodDataObj(
+        name: '橘子',
+        weight: 1,
+        image: "assets/images/home_page/diary_view/food/oringe.png"),
+    FoodDataObj(
+        name: '桃子',
+        weight: 1,
+        image: "assets/images/home_page/diary_view/food/peach.png"),
+    FoodDataObj(
+        name: '木瓜',
+        weight: 1,
+        image: "assets/images/home_page/diary_view/food/pumpkin.png"),
+    FoodDataObj(
+        name: '牛肉',
+        weight: 10,
+        image: "assets/images/home_page/diary_view/food/beef.png"),
+    FoodDataObj(
+        name: '玉米',
+        weight: 1,
+        image: "assets/images/home_page/diary_view/food/corn.png"),
+    FoodDataObj(
+        name: '生菜',
+        weight: 1,
+        image: "assets/images/home_page/diary_view/food/lettuce.png"),
+    FoodDataObj(
+        name: '牛奶',
+        weight: 1,
+        image: "assets/images/home_page/diary_view/food/milk.png"),
+    FoodDataObj(
+        name: '橘子',
+        weight: 1,
+        image: "assets/images/home_page/diary_view/food/oringe.png"),
+    FoodDataObj(
+        name: '桃子',
+        weight: 1,
+        image: "assets/images/home_page/diary_view/food/peach.png"),
+    FoodDataObj(
+        name: '木瓜',
+        weight: 1,
+        image: "assets/images/home_page/diary_view/food/pumpkin.png"),
+    FoodDataObj(
+        name: '牛肉',
+        weight: 10,
+        image: "assets/images/home_page/diary_view/food/beef.png"),
+    FoodDataObj(
+        name: '玉米',
+        weight: 1,
+        image: "assets/images/home_page/diary_view/food/corn.png"),
+    FoodDataObj(
+        name: '生菜',
+        weight: 1,
+        image: "assets/images/home_page/diary_view/food/lettuce.png"),
+    FoodDataObj(
+        name: '牛奶',
+        weight: 1,
+        image: "assets/images/home_page/diary_view/food/milk.png"),
+    FoodDataObj(
+        name: '橘子',
+        weight: 1,
+        image: "assets/images/home_page/diary_view/food/oringe.png"),
+    FoodDataObj(
+        name: '桃子',
+        weight: 1,
+        image: "assets/images/home_page/diary_view/food/peach.png"),
+    FoodDataObj(
+        name: '木瓜',
+        weight: 1,
+        image: "assets/images/home_page/diary_view/food/pumpkin.png"),
   ];
 
   @override

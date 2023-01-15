@@ -142,7 +142,7 @@ class DeviceManagerContentItemView extends StatelessWidget {
           rowPadding,
           LayoutBuilder(
             builder: (BuildContext context, BoxConstraints size) {
-              return Container(
+              return SizedBox(
                 width: size.maxWidth - buttonWidth - 10,
                 child: Wrap(
                   runSpacing: 4.0, // gap between lines

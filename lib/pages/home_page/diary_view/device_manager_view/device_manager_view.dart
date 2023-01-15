@@ -1,7 +1,7 @@
 import 'package:client/pages/home_page/diary_view/device_manager_view/device_manager_content_Item_view/device_manager_content_item_view.dart';
 import 'package:flutter/material.dart';
 
-import '../components/diary_card_container/diary_card_container.dart';
+import '../../components/home_page_card_container/home_page_card_container.dart';
 import 'device_manager_top_view/device_manager_top_view.dart';
 
 class DeviceManagerView extends StatelessWidget {
@@ -9,7 +9,7 @@ class DeviceManagerView extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return DiaryCardContainer(
+    return HomePageCardContainer(
       subtitle: '更换设备',
       title: '穿戴设备',
       child: Container(
