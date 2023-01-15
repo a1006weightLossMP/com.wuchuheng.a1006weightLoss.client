@@ -1,7 +1,7 @@
 import 'package:flutter/material.dart';
 
 import '../../components/home_page_card_container/home_page_card_container.dart';
-import 'device_manager_content_Item_view/device_manager_content_item_view.dart';
+import 'content_item_view/content_item_view.dart';
 import 'device_manager_top_view/device_manager_top_view.dart';
 
 class DeviceManagerView extends StatelessWidget {
@@ -18,7 +18,7 @@ class DeviceManagerView extends StatelessWidget {
         child: Column(
           children: const [
             DeviceManagerTopView(),
-            DeviceManagerContentItemView(
+            ContentItemView(
               name: '血压',
               levelState: LevelState.danger,
               unit: 'mmHg',
@@ -29,7 +29,7 @@ class DeviceManagerView extends StatelessWidget {
                 '正常血压范围: 200mmHg',
               ],
             ),
-            DeviceManagerContentItemView(
+            ContentItemView(
               name: '心率',
               levelState: LevelState.normal,
               unit: '次/分',
@@ -38,7 +38,7 @@ class DeviceManagerView extends StatelessWidget {
                 '正常心率范围: 60-100次/分',
               ],
             ),
-            DeviceManagerContentItemView(
+            ContentItemView(
               name: '血糖',
               levelState: LevelState.danger,
               unit: 'mg/dL',
@@ -47,7 +47,7 @@ class DeviceManagerView extends StatelessWidget {
                 '正常血糖范围: 3.9~6.1 mg/dL',
               ],
             ),
-            DeviceManagerContentItemView(
+            ContentItemView(
               name: '体脂率',
               levelState: LevelState.warning,
               unit: '%',

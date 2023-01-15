@@ -31,7 +31,7 @@ String levelStateMapName(LevelState levelState) {
   }
 }
 
-class DeviceManagerContentItemView extends StatelessWidget {
+class ContentItemView extends StatelessWidget {
   final String name;
   final LevelState levelState;
   final String unit;
@@ -39,7 +39,7 @@ class DeviceManagerContentItemView extends StatelessWidget {
   final List<String> items;
   final bool isShowBorder;
 
-  const DeviceManagerContentItemView({
+  const ContentItemView({
     Key? key,
     required this.name,
     required this.levelState,
@@ -125,7 +125,7 @@ class DeviceManagerContentItemView extends StatelessWidget {
                 height: 30,
                 width: buttonWidth,
                 decoration: BoxDecoration(
-                  borderRadius: BorderRadius.all(
+                  borderRadius: const BorderRadius.all(
                     Radius.circular(30),
                   ),
                   color: primaryColor,
