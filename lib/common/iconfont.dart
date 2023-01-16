@@ -2,6 +2,12 @@ import 'package:flutter/widgets.dart';
 class IconFont{
 	static const String _family = 'iconfont';
 	IconFont._();
+	static const IconData icon_customerService = IconData(0xe740, fontFamily: _family);
+	static const IconData icon_process = IconData(0xe866, fontFamily: _family);
+	static const IconData icon_order = IconData(0xe63b, fontFamily: _family);
+	static const IconData icon_bill = IconData(0xe89e, fontFamily: _family);
+	static const IconData icon_after_safes = IconData(0xe87e, fontFamily: _family);
+	static const IconData icon_daizhifu = IconData(0xe61c, fontFamily: _family);
 	static const IconData icon_editor = IconData(0xe601, fontFamily: _family);
 	static const IconData icon_play2 = IconData(0xe6de, fontFamily: _family);
 	static const IconData icon_play = IconData(0xe65b, fontFamily: _family);
