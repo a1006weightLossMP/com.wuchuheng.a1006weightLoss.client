@@ -15,7 +15,7 @@ class HomePage extends StatefulWidget {
 }
 
 class _HomePageState extends State<HomePage> {
-  int activeIndex = 2;
+  int activeIndex = 0;
 
   List<NavigationItemDataObj> navigationItems = [
     NavigationItemDataObj(

@@ -22,7 +22,7 @@ class ItemView extends StatelessWidget {
             Text(title)
           ],
         ),
-        Icon(Icons.chevron_right),
+        const Icon(Icons.chevron_right),
       ],
     );
   }
