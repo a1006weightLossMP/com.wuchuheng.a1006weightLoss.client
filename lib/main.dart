@@ -20,7 +20,7 @@ class MyApp extends StatelessWidget {
           subtitle1: TextStyle(color: HexColor('#8E8E8E')), // 副标题
         ),
       ),
-      initialRoute: searchingPageRouteName,
+      initialRoute: initialRoute,
       onGenerateRoute: onGenerateRoute,
     );
   }
