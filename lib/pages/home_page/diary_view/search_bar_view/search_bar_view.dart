@@ -2,7 +2,7 @@ import 'package:client/pages/home_page/diary_view/search_bar_view/avatar_bar_vie
 import 'package:flutter/material.dart';
 import 'package:hexcolor/hexcolor.dart';
 
-import '../../home_page_common.dart';
+import '../../../../config/common_config.dart';
 import 'search_view/search_view.dart';
 
 class SearchBarView extends StatelessWidget {

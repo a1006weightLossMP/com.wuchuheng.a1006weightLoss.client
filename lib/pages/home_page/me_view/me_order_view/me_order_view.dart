@@ -1,7 +1,8 @@
 import 'package:client/common/iconfont.dart';
-import 'package:client/pages/home_page/components/home_page_card_container/home_page_card_container.dart';
-import 'package:client/pages/home_page/home_page_common.dart';
 import 'package:flutter/material.dart';
+
+import '../../../../components/card_container/card_container.dart';
+import '../../../../config/common_config.dart';
 
 class MeOrderItemView extends StatelessWidget {
   final IconData iconData;
@@ -28,7 +29,7 @@ class MeOrderView extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return HomePageCardContainer(
+    return CardContainer(
       title: '我的订单',
       subtitle: '全部订单',
       child: Container(

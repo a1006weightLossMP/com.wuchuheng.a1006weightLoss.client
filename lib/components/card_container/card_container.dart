@@ -1,10 +1,9 @@
-import 'package:client/pages/home_page/diary_view/daily_calories_view/daily_calories_common.dart';
 import 'package:flutter/material.dart';
 
 import '../../../../common/iconfont.dart';
-import '../../home_page_common.dart';
+import '../../config/common_config.dart';
 
-class HomePageCardContainer extends StatelessWidget {
+class CardContainer extends StatelessWidget {
   final Widget child;
   final String title;
   final String? subtitle;
@@ -14,7 +13,7 @@ class HomePageCardContainer extends StatelessWidget {
   final IconData? leftIconData;
   Color? subtitleColor;
   double subtitleSize;
-  HomePageCardContainer({
+  CardContainer({
     Key? key,
     required this.child,
     required this.title,

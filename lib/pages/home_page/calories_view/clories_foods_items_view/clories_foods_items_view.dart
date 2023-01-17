@@ -1,7 +1,7 @@
 import 'package:flutter/material.dart';
 
-import '../../components/home_page_card_container/home_page_card_container.dart';
-import '../../home_page_common.dart';
+import '../../../../components/card_container/card_container.dart';
+import '../../../../config/common_config.dart';
 import '../calories_view.dart';
 
 class CaloriesFoodsItemsView extends StatelessWidget {
@@ -9,7 +9,7 @@ class CaloriesFoodsItemsView extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return HomePageCardContainer(
+    return CardContainer(
       subtitle: '查看更多',
       title: "热量说明",
       child: Container(

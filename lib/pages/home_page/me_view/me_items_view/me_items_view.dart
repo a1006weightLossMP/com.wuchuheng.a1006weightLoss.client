@@ -1,6 +1,7 @@
 import 'package:client/common/iconfont.dart';
-import 'package:client/pages/home_page/home_page_common.dart';
 import 'package:flutter/material.dart';
+
+import '../../../../config/common_config.dart';
 
 class ItemView extends StatelessWidget {
   final String title;

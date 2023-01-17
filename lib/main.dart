@@ -1,7 +1,6 @@
+import 'package:client/route/route.dart';
 import 'package:flutter/material.dart';
 import 'package:hexcolor/hexcolor.dart';
-
-import 'pages/home_page/home_page.dart';
 
 void main() {
   runApp(const MyApp());
@@ -21,7 +20,8 @@ class MyApp extends StatelessWidget {
           subtitle1: TextStyle(color: HexColor('#8E8E8E')), // 副标题
         ),
       ),
-      home: const HomePage(),
+      initialRoute: searchingPageRouteName,
+      onGenerateRoute: onGenerateRoute,
     );
   }
 }

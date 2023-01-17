@@ -1,9 +1,9 @@
-import 'package:client/pages/home_page/home_page_common.dart';
 import 'package:flutter/material.dart';
 import 'package:hexcolor/hexcolor.dart';
 
 import '../../../../common/iconfont.dart';
-import '../../components/home_page_card_container/home_page_card_container.dart';
+import '../../../../components/card_container/card_container.dart';
+import '../../../../config/common_config.dart';
 
 class CaloriesPlayingItemView extends StatelessWidget {
   final String image;
@@ -117,7 +117,7 @@ class CaloriesPlayingView extends StatelessWidget {
     Color primaryColor = Theme.of(context).primaryColor;
 
     final double axisSpacing = 10;
-    return HomePageCardContainer(
+    return CardContainer(
       subtitle: "直播间",
       leftIconData: IconFont.icon_play,
       subtitleSize: 15,

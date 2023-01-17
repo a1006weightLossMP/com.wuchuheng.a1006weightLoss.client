@@ -1,8 +1,5 @@
-import 'package:client/common/iconfont.dart';
-import 'package:client/pages/home_page/home_page_common.dart';
 import 'package:flutter/material.dart';
 
-import '../components/home_page_card_container/home_page_card_container.dart';
 import 'calories_playing_view/calories_playing_view.dart';
 import 'clories_foods_items_view/clories_foods_items_view.dart';
 

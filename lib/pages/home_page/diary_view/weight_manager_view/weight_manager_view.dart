@@ -1,7 +1,7 @@
 import 'package:flutter/material.dart';
 
-import '../../components/home_page_card_container/home_page_card_container.dart';
-import '../../home_page_common.dart';
+import '../../../../components/card_container/card_container.dart';
+import '../../../../config/common_config.dart';
 import 'data_obj.dart';
 
 class WeightManagerView extends StatelessWidget {
@@ -21,7 +21,7 @@ class WeightManagerView extends StatelessWidget {
     const double valueFontSize = 20;
     Color primaryColor = Theme.of(context).primaryColor;
     Color? subtitleColor = Theme.of(context).textTheme.subtitle1?.color;
-    return HomePageCardContainer(
+    return CardContainer(
       title: '体重管理',
       subtitle: '查看详情',
       child: Container(

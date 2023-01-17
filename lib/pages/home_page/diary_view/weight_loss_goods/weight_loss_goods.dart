@@ -1,7 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:hexcolor/hexcolor.dart';
 
-import '../../components/home_page_card_container/home_page_card_container.dart';
+import '../../../../components/card_container/card_container.dart';
 
 class GoodsItemObj {
   final String image;
@@ -78,7 +78,7 @@ class WeightLossGoods extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     const double height = 160;
-    return HomePageCardContainer(
+    return CardContainer(
       title: '减重方案产品',
       child: Container(
         color: Colors.white,
