@@ -38,7 +38,7 @@ dependencies:
   cupertino_icons: ^1.0.2
   hexcolor: ^3.0.1
   syncfusion_flutter_gauges: ^20.4.43
-  wuchuheng_route_parser: ^1.0.3
+  wuchuheng_route_parser: ^1.0.4
 
 dev_dependencies:
   flutter_test:

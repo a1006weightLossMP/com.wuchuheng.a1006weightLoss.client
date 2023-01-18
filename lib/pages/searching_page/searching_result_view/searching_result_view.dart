@@ -1,4 +1,5 @@
 import 'package:client/config/common_config.dart';
+import 'package:client/route/route.dart';
 import 'package:flutter/material.dart';
 
 class ResultItemObj {
@@ -155,8 +156,8 @@ class SearchingResultView extends StatelessWidget {
 
   SearchingResultView({Key? key}) : super(key: key);
 
-  void onTap(int index) {
-    debugPrint(index.toString());
+  void onTap(int index, BuildContext context) {
+    Navigator.pushNamed(context, foodDetailRouteName);
   }
 
   @override
@@ -179,7 +180,7 @@ class SearchingResultView extends StatelessWidget {
                   width: width,
                   height: 60,
                   child: ResultItemView(
-                    onTap: () => onTap(i),
+                    onTap: () => onTap(i, context),
                     image: items[i].image,
                     name: items[i].name,
                     subtitle: items[i].subtitle,

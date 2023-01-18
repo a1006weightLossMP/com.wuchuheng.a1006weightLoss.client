@@ -27,7 +27,10 @@ class SearchView extends StatelessWidget {
           children: [
             const Icon(IconFont.icon_search),
             Expanded(
-              child: Text("搜索食物营养和热量", style: TextStyle(color: subtitleColor)),
+              child: Text(
+                "搜索食物营养和热量",
+                style: TextStyle(color: subtitleColor),
+              ),
             ),
           ],
         ),

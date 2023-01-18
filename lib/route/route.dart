@@ -8,7 +8,7 @@ import 'package:wuchuheng_route_parser/wuchuheng_route_parser.dart';
 const String searchingPageRouteName = '/searching';
 const String homePageRouteName = '/';
 const String foodDetailRouteName = '/foods/:id';
-const String initialRoute = '/foods/1';
+const String initialRoute = '/';
 
 RoutesType routes = {
   homePageRouteName: () => const HomePage(),
