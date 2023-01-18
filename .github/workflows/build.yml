@@ -1,4 +1,4 @@
-name: Build IOS
+name: Building
 
 on:
   push:
@@ -7,7 +7,7 @@ on:
       - master
 jobs:
   build_ios:
-    name: Build IOS
+    name: IOS Building
     runs-on: macos-latest
     steps:
       - name: Checkout code from ref
@@ -57,3 +57,19 @@ jobs:
           APP_STORE_CONNECT_API_KEY_ID: "${{ secrets.APP_STORE_CONNECT_API_KEY_ID}}"
           MATCH_PASSWORD: "${{ secrets.MATCH_PASSWORD}}"
           TEMP_KEYCHAIN_USER: "${{ secrets.TEMP_KEYCHAIN_USER}}"
+
+  android:
+    name: Android Building
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v3
+      - uses: subosito/flutter-action@v2
+        with:
+          flutter-version: '3.3.10'
+          channel: 'stable'
+      - run: flutter --version
+      - run: flutter doctor -v
+      - name: Install project dependencies
+        run: flutter pub get
+      - name: Build artifacts
+        run: flutter build apk --release
