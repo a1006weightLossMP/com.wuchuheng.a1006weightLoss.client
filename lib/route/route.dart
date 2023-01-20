@@ -1,6 +1,7 @@
 import 'package:client/pages/food_detail/food_detail.dart';
 import 'package:client/pages/home_page/home_page.dart';
 import 'package:client/pages/searching_page/searching_page.dart';
+import 'package:client/pages/weight_loss_program_page/weight_loss_program_page.dart';
 import 'package:client/pages/weight_management_page/weight_management_page.dart';
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
@@ -10,14 +11,16 @@ const String searchingPageRouteName = '/searching';
 const String homePageRouteName = '/';
 const String foodDetailRouteName = '/foods/:id';
 const String weightManagerRouteName = '/weightManagement';
+const String weightLossProgramRouteName = '/weightLossProgram';
 
-const String initialRoute = weightManagerRouteName;
+const String initialRoute = weightLossProgramRouteName;
 
 RoutesType routes = {
   homePageRouteName: () => const HomePage(),
   searchingPageRouteName: () => const SearchingPage(),
   foodDetailRouteName: () => const FoodDetail(),
-  weightManagerRouteName: () => const WeightManagementPage()
+  weightManagerRouteName: () => const WeightManagementPage(),
+  weightLossProgramRouteName: () => const WeightLossProgramPage(),
 };
 
 Route<dynamic> onGenerateRoute(RouteSettings settings) {
