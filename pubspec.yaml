@@ -39,6 +39,8 @@ dependencies:
   hexcolor: ^3.0.1
   syncfusion_flutter_gauges: ^20.4.43
   wuchuheng_route_parser: ^1.0.4
+  fl_chart: ^0.55.2
+  syncfusion_flutter_charts: ^20.4.44
 
 dev_dependencies:
   flutter_test:

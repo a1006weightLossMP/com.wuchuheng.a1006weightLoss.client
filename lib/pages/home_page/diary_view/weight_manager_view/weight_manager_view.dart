@@ -1,3 +1,4 @@
+import 'package:client/route/route.dart';
 import 'package:flutter/material.dart';
 
 import '../../../../components/card_container/card_container.dart';
@@ -16,6 +17,11 @@ class WeightManagerView extends StatelessWidget {
 
   WeightManagerView({Key? key}) : super(key: key);
 
+  void onTapSubtitle(BuildContext context) => Navigator.pushNamed(
+        context,
+        weightManagerRouteName,
+      );
+
   @override
   Widget build(BuildContext context) {
     const double valueFontSize = 20;
@@ -24,6 +30,7 @@ class WeightManagerView extends StatelessWidget {
     return CardContainer(
       title: '体重管理',
       subtitle: '查看详情',
+      onTapSubtitle: () => onTapSubtitle(context),
       child: Container(
           height: 120,
           margin: const EdgeInsets.only(left: sideMargin, right: sideMargin),
@@ -37,54 +44,57 @@ class WeightManagerView extends StatelessWidget {
               double itemWidth = constraints.maxWidth / crossAxisCount;
               double itemHeight =
                   constraints.maxHeight / (items.length / crossAxisCount);
-              return GridView.count(
-                physics: const NeverScrollableScrollPhysics(),
-                crossAxisCount: crossAxisCount,
-                childAspectRatio: (itemWidth / itemHeight),
-                children: [
-                  for (int i = 0; i < items.length; i++)
-                    Center(
-                      child: Column(
-                        mainAxisAlignment: MainAxisAlignment.center,
-                        children: [
-                          Row(
+              return GestureDetector(
+                  onTap: () => onTapSubtitle(context),
+                  child: GridView.count(
+                    physics: const NeverScrollableScrollPhysics(),
+                    crossAxisCount: crossAxisCount,
+                    childAspectRatio: (itemWidth / itemHeight),
+                    children: [
+                      for (int i = 0; i < items.length; i++)
+                        Center(
+                          child: Column(
                             mainAxisAlignment: MainAxisAlignment.center,
                             children: [
-                              Text(
-                                items[i].value.toString(),
-                                style: TextStyle(
-                                  fontSize: valueFontSize,
-                                  color: primaryColor,
-                                ),
-                              ),
-                              SizedBox(
-                                height: valueFontSize,
-                                child: Column(
-                                  mainAxisAlignment: MainAxisAlignment.end,
-                                  crossAxisAlignment: CrossAxisAlignment.end,
-                                  children: [
-                                    Text(
-                                      items[i].unit,
-                                      style: TextStyle(
-                                        fontSize: 10,
-                                        color: subtitleColor,
-                                      ),
+                              Row(
+                                mainAxisAlignment: MainAxisAlignment.center,
+                                children: [
+                                  Text(
+                                    items[i].value.toString(),
+                                    style: TextStyle(
+                                      fontSize: valueFontSize,
+                                      color: primaryColor,
                                     ),
-                                  ],
-                                ),
+                                  ),
+                                  SizedBox(
+                                    height: valueFontSize,
+                                    child: Column(
+                                      mainAxisAlignment: MainAxisAlignment.end,
+                                      crossAxisAlignment:
+                                          CrossAxisAlignment.end,
+                                      children: [
+                                        Text(
+                                          items[i].unit,
+                                          style: TextStyle(
+                                            fontSize: 10,
+                                            color: subtitleColor,
+                                          ),
+                                        ),
+                                      ],
+                                    ),
+                                  ),
+                                ],
                               ),
+                              const Padding(padding: EdgeInsets.only(top: 2)),
+                              Text(
+                                items[i].name,
+                                style: TextStyle(color: subtitleColor),
+                              )
                             ],
                           ),
-                          const Padding(padding: EdgeInsets.only(top: 2)),
-                          Text(
-                            items[i].name,
-                            style: TextStyle(color: subtitleColor),
-                          )
-                        ],
-                      ),
-                    ),
-                ],
-              );
+                        ),
+                    ],
+                  ));
             },
           )),
     );

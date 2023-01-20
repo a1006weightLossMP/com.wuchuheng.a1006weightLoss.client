@@ -11,6 +11,7 @@ class CardContainer extends StatelessWidget {
   final Color? subtitleIconColor;
   final bool isShowSubtitleIcon;
   final IconData? leftIconData;
+  final void Function()? onTapSubtitle;
   Color? subtitleColor;
   double subtitleSize;
   CardContainer({
@@ -24,6 +25,7 @@ class CardContainer extends StatelessWidget {
     this.isShowSubtitleIcon = true,
     this.subtitleColor,
     this.leftIconData,
+    this.onTapSubtitle,
   }) : super(key: key);
 
   @override
@@ -50,36 +52,41 @@ class CardContainer extends StatelessWidget {
                       fontWeight: FontWeight.w500,
                     ),
                   ),
-                  Row(
-                    children: [
-                      if (leftIconData != null)
-                        Container(
-                          padding: const EdgeInsets.only(right: 2),
-                          child: Icon(
-                            leftIconData,
-                            size: subtitleSize,
-                            color: subtitleColor,
+                  GestureDetector(
+                    onTap: () {
+                      if (onTapSubtitle != null) onTapSubtitle!();
+                    },
+                    child: Row(
+                      children: [
+                        if (leftIconData != null)
+                          Container(
+                            padding: const EdgeInsets.only(right: 2),
+                            child: Icon(
+                              leftIconData,
+                              size: subtitleSize,
+                              color: subtitleColor,
+                            ),
                           ),
-                        ),
-                      if (subtitle != null)
-                        Text(
-                          subtitle!,
-                          style: TextStyle(
-                            fontSize: subtitleSize,
-                            color: subtitleColor,
+                        if (subtitle != null)
+                          Text(
+                            subtitle!,
+                            style: TextStyle(
+                              fontSize: subtitleSize,
+                              color: subtitleColor,
+                            ),
                           ),
-                        ),
-                      if (isShowSubtitleIcon &&
-                          (subtitleIconData != null || subtitle != null))
-                        Container(
-                          margin: const EdgeInsets.only(left: 3),
-                          child: Icon(
-                            subtitleIconData ?? IconFont.icon_right,
-                            color: subtitleIconColor,
-                            size: subtitleSize,
+                        if (isShowSubtitleIcon &&
+                            (subtitleIconData != null || subtitle != null))
+                          Container(
+                            margin: const EdgeInsets.only(left: 3),
+                            child: Icon(
+                              subtitleIconData ?? IconFont.icon_right,
+                              color: subtitleIconColor,
+                              size: subtitleSize,
+                            ),
                           ),
-                        ),
-                    ],
+                      ],
+                    ),
                   ),
                 ],
               )),
