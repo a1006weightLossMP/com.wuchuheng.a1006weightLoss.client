@@ -1,6 +1,7 @@
-import 'package:client/pages/weight_loss_program_page/weight_loss_program_common.dart';
 import 'package:flutter/material.dart';
 import 'package:hexcolor/hexcolor.dart';
+
+import '../../../config/common_config.dart';
 
 class CookbookItemView extends StatelessWidget {
   final String image;

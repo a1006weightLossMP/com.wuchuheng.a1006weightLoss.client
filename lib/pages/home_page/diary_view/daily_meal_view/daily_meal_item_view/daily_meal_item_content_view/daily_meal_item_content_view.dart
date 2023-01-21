@@ -1,5 +1,7 @@
 import 'package:flutter/material.dart';
 
+import '../../../../../../route/route.dart';
+
 class FoodDataObj {
   final String name;
   final double weight;
@@ -238,11 +240,19 @@ class _DailyMealItemContentViewState extends State<DailyMealItemContentView>
                         children: [
                           Row(
                             children: [
-                              Text('保存为食物',
-                                  style: TextStyle(color: primaryColor)),
+                              GestureDetector(
+                                child: Text(
+                                  '保存为食谱',
+                                  style: TextStyle(color: primaryColor),
+                                ),
+                                onTap: () => Navigator.of(context)
+                                    .pushNamed(myCookBookRouteName),
+                              ),
                               const Padding(padding: EdgeInsets.only(left: 10)),
-                              Text('继续添加',
-                                  style: TextStyle(color: primaryColor)),
+                              Text(
+                                '继续添加',
+                                style: TextStyle(color: primaryColor),
+                              ),
                             ],
                           ),
                           Container(

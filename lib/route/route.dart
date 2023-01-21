@@ -1,5 +1,6 @@
 import 'package:client/pages/food_detail/food_detail.dart';
 import 'package:client/pages/home_page/home_page.dart';
+import 'package:client/pages/my_cook_book_page/my_cook_book_page.dart';
 import 'package:client/pages/searching_page/searching_page.dart';
 import 'package:client/pages/weight_loss_program_page/weight_loss_program_page.dart';
 import 'package:client/pages/weight_management_page/weight_management_page.dart';
@@ -12,8 +13,9 @@ const String homePageRouteName = '/';
 const String foodDetailRouteName = '/foods/:id';
 const String weightManagerRouteName = '/weightManagement';
 const String weightLossProgramRouteName = '/weightLossProgram';
+const String myCookBookRouteName = '/myCookBook';
 
-const String initialRoute = weightLossProgramRouteName;
+const String initialRoute = myCookBookRouteName;
 
 RoutesType routes = {
   homePageRouteName: () => const HomePage(),
@@ -21,6 +23,7 @@ RoutesType routes = {
   foodDetailRouteName: () => const FoodDetail(),
   weightManagerRouteName: () => const WeightManagementPage(),
   weightLossProgramRouteName: () => const WeightLossProgramPage(),
+  myCookBookRouteName: () => const MyCookBookPage(),
 };
 
 Route<dynamic> onGenerateRoute(RouteSettings settings) {
