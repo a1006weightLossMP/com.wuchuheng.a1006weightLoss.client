@@ -1,8 +1,8 @@
 @font-face {
   font-family: "iconfont"; /* Project id 3826444 */
-  src: url('iconfont.woff2?t=1673847812209') format('woff2'),
-       url('iconfont.woff?t=1673847812209') format('woff'),
-       url('iconfont.ttf?t=1673847812209') format('truetype');
+  src: url('iconfont.woff2?t=1674304498838') format('woff2'),
+       url('iconfont.woff?t=1674304498838') format('woff'),
+       url('iconfont.ttf?t=1674304498838') format('truetype');
 }
 
 .iconfont {
@@ -11,6 +11,10 @@
   font-style: normal;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
+}
+
+.icon-mbile-full:before {
+  content: "\e9ce";
 }
 
 .icon-customerService:before {

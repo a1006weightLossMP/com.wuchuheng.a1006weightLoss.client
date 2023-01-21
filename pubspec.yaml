@@ -78,6 +78,7 @@ flutter:
     - assets/images/home_page/calories_view/
     - assets/images/foods_detail_page/
     - assets/images/weight_loss_program/
+    - assets/images/menu_page/
 
   # An image asset can refer to one or more resolution-specific "variants", see
   # https://flutter.dev/assets-and-images/#resolution-aware

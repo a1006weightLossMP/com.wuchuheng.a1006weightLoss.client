@@ -249,9 +249,13 @@ class _DailyMealItemContentViewState extends State<DailyMealItemContentView>
                                     .pushNamed(myCookBookRouteName),
                               ),
                               const Padding(padding: EdgeInsets.only(left: 10)),
-                              Text(
-                                '继续添加',
-                                style: TextStyle(color: primaryColor),
+                              GestureDetector(
+                                onTap: () => Navigator.of(context)
+                                    .pushNamed(menuRouteName),
+                                child: Text(
+                                  '继续添加',
+                                  style: TextStyle(color: primaryColor),
+                                ),
                               ),
                             ],
                           ),

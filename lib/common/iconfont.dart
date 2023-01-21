@@ -2,6 +2,7 @@ import 'package:flutter/widgets.dart';
 class IconFont{
 	static const String _family = 'iconfont';
 	IconFont._();
+	static const IconData icon_mbile_full = IconData(0xe9ce, fontFamily: _family);
 	static const IconData icon_customerService = IconData(0xe740, fontFamily: _family);
 	static const IconData icon_process = IconData(0xe866, fontFamily: _family);
 	static const IconData icon_order = IconData(0xe63b, fontFamily: _family);
