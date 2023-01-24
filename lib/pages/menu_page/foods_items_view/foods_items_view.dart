@@ -5,17 +5,29 @@ import 'package:hexcolor/hexcolor.dart';
 import 'button_view/button_view.dart';
 
 class ItemView extends StatelessWidget {
-  const ItemView({Key? key}) : super(key: key);
+  final String image;
+  final String name;
+  final double price;
+  final double calories;
+  final double weight;
+  const ItemView({
+    Key? key,
+    required this.image,
+    required this.name,
+    required this.price,
+    required this.calories,
+    required this.weight,
+  }) : super(key: key);
 
   @override
   Widget build(BuildContext context) {
     const double height = 80;
-    final double padding = 6;
-    final double imageSize = height - padding * 2;
+    const double padding = 6;
+    const double imageSize = height - padding * 2;
     final Color? subtitleColor = Theme.of(context).textTheme.subtitle1?.color;
     return Container(
       margin: const EdgeInsets.only(top: 10),
-      padding: EdgeInsets.all(padding),
+      padding: const EdgeInsets.all(padding),
       decoration: BoxDecoration(
         color: Colors.white,
         borderRadius: BorderRadius.circular(10),
@@ -27,41 +39,41 @@ class ItemView extends StatelessWidget {
           ClipRRect(
             borderRadius: BorderRadius.circular(10),
             child: SizedBox.fromSize(
-              size: Size(imageSize, imageSize),
+              size: const Size(imageSize, imageSize),
               child: Image.asset(
-                'assets/images/menu_page/beef.png',
+                image,
                 width: imageSize,
                 height: imageSize,
               ),
             ),
           ),
           Container(
-            margin: EdgeInsets.only(left: 10),
+            margin: const EdgeInsets.only(left: 10),
             child: Column(
               mainAxisAlignment: MainAxisAlignment.spaceBetween,
               crossAxisAlignment: CrossAxisAlignment.start,
               children: [
                 RichText(
                   text: TextSpan(
-                    text: '牛奶',
+                    text: name,
                     children: [
                       TextSpan(
-                        text: ' / 200克',
+                        text: ' / $weight克',
                         style: TextStyle(color: subtitleColor),
                       ),
                     ],
-                    style: TextStyle(color: Colors.black),
+                    style: const TextStyle(color: Colors.black),
                   ),
                 ),
                 Text(
-                  '32Kcal',
+                  '${calories}Kcal',
                   style: TextStyle(
                     color: HexColor('#F6C897'),
                   ),
                 ),
                 Text(
-                  '¥ 2',
-                  style: TextStyle(
+                  '¥ $price',
+                  style: const TextStyle(
                     color: Colors.red,
                     fontSize: 20,
                   ),
@@ -97,8 +109,27 @@ class FoodsItemsView extends StatelessWidget {
         child: SingleChildScrollView(
           child: Column(
             children: const [
-              ItemView(),
-              ItemView(),
+              ItemView(
+                name: '牛肉',
+                weight: 200,
+                calories: 32,
+                price: 2,
+                image: 'assets/images/menu_page/beef.png',
+              ),
+              ItemView(
+                name: '玉米',
+                weight: 200,
+                calories: 32,
+                price: 2,
+                image: 'assets/images/menu_page/corn.png',
+              ),
+              ItemView(
+                name: '牛奶',
+                weight: 200,
+                calories: 32,
+                price: 2,
+                image: 'assets/images/menu_page/milk.png',
+              ),
             ],
           ),
         ),

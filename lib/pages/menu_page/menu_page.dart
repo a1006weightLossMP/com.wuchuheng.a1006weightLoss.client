@@ -77,11 +77,7 @@ class _MenuPageState extends State<MenuPage> {
               ),
             ],
           ),
-          const Positioned(
-            bottom: 20,
-            left: 0,
-            child: FloatingButtonView(),
-          )
+          const Positioned(bottom: 20, left: 0, child: FloatingButtonView())
         ],
       ),
     );
